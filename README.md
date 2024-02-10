@@ -1,6 +1,3 @@
-Project Title: DeepStockPredict
-
-Readme.md:
 
 # DeepStockPredict
 
