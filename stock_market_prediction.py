@@ -7,17 +7,6 @@ Original file is located at
     https://colab.research.google.com/github/TejParmar10/stock_market_prediction/blob/main/stock_market_prediction.ipynb
 """
 
-import pandas as pd
-import pandas_datareader as pdr
-import numpy as np
-url='https://raw.githubusercontent.com/mwitiderrick/stockprice/master/NSE-TATAGLOBAL.csv'
-data= pd.read_csv(
-    url,
-    sep=',',
-    encoding='utf-8',
-)
-print(data)
-data.isna().any()
 
 df=pdr.get_data_tiingo('AAPL',api_key='b8ff655b05592100b3894dcd2b7efcc2ad825a74')
 
