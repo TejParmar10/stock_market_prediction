@@ -1,57 +1,59 @@
 
-# DeepStockPredict
+
+---
+
+# Stock Market Prediction Project
 
 ## Overview
 
-DeepStockPredict is a project focused on utilizing deep learning, specifically Long Short-Term Memory (LSTM) networks, for stock market prediction. This project is tailored for predicting stock prices using historical Apple stock data. The LSTM model is employed to capture intricate patterns and dependencies in the time series data, facilitating more accurate predictions of future stock prices.
+This project focuses on predicting stock market prices using a deep learning model based on historical stock data. The code is implemented in Python using TensorFlow and pandas libraries.
 
-## Features
+## Project Structure
 
-- **LSTM Model**: Utilizes a deep learning LSTM architecture for time series prediction.
-- **Data Preprocessing**: Includes a comprehensive data preprocessing pipeline to handle missing values, scale data, and engineer features.
-- **Sequence Generation**: Creates sequences of historical data suitable for training the LSTM model.
-- **Training and Validation**: Trains the LSTM model on historical data with validation for model evaluation.
-- **Prediction Visualization**: Provides visualizations to compare predicted and actual stock prices.
+- **`stock_market_prediction.ipynb`**: Jupyter Notebook containing the code for the project.
+- **`AAPL.csv`**: CSV file containing historical stock data for the Apple Inc. (AAPL) stock.
 
 ## Getting Started
 
-Follow these steps to get started with DeepStockPredict:
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/TejParmar10/stock_market_prediction.git
+   cd stock_market_prediction
+   ```
 
-1. **Clone the Repository**: `git clone https://github.com/TejParmar10/stock_market_prediction.git`
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-2. **Install Dependencies**: Navigate to the project directory and install the required dependencies using `pip install -r requirements.txt`.
+3. **Run the Notebook:**
+   Open the `stock_market_prediction.ipynb` notebook in Jupyter and run each cell to train the model and make predictions.
 
-3. **Data Preparation**: Ensure you have the Apple stock dataset (e.g., `apple_stock_data.csv`) in the project directory.
+## Data Source
 
-4. **Run the Application**: Execute the `stock_prediction_apple.py` script to train the LSTM model and make predictions.
+The historical stock data is fetched using the Tiingo API. You can obtain your API key [here](https://api.tiingo.com/).
 
-```bash
-python stock_prediction_apple.py
-```
+## Model Architecture
 
-## File Structure
-
-- `stock_prediction_apple.py`: Main script for loading, preprocessing, training, and predicting using the LSTM model.
-- `requirements.txt`: List of Python packages required for the project.
-
-## Customization
-
-Feel free to customize the hyperparameters, model architecture, or any other aspect of the project to suit your needs. Experiment with different LSTM configurations for optimal performance.
+The neural network model used for stock prediction consists of multiple LSTM layers followed by a Dense output layer. The model is trained using the Adam optimizer and Mean Squared Error (MSE) loss function.
 
 ## Results
 
-The project aims to provide accurate stock price predictions, and the results can be visualized through plots generated during the prediction phase.
+The model is trained and validated on historical stock data, and the predictions are visualized alongside the actual stock prices using matplotlib.
 
-## Contributing
+## Future Work
 
-Contributions are welcome! If you have suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
+- Fine-tune model parameters for improved performance.
+- Explore the use of different deep learning architectures.
+- Experiment with additional features or technical indicators.
+
+## Acknowledgments
+
+- This project is for educational purposes and is not financial advice.
+- Special thanks to Tiingo for providing financial market data through their API.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
-## Acknowledgments
-
-- Special thanks to the open-source community and contributors to the libraries and frameworks used in this project.
-
-Happy Predicting!
+---
